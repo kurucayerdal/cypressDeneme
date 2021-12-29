@@ -1,5 +1,5 @@
 ///<reference types="Cypress"/>   
-//her spec dosyasının başına yukardaki yazılıyor!Yoksa testler çalışmaz!
+
 //alttaki context javada bildiğimiz class yapısı gibi.tırnak içinde class'ımızın adını verdik.
 //testng'deki test anotation'unun buradaki karşılığı it("class ismi",()=>{}) şeklinde oluyor.
 

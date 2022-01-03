@@ -26,8 +26,8 @@ context("Alert", () =>{
         cy.visit("https://the-internet.herokuapp.com/javascript_alerts")
         //cy.contains("Click for JS Prompt").click()
   
-        cy.window().then(($win) => {
-          cy.stub($win, 'prompt').returns('MERHABA')
+        cy.window().then(($pencere) => {
+          cy.stub($pencere, 'prompt').returns('MERHABA')
           cy.contains('Click for JS Prompt').click()
           //cy.get(':nth-child(3) > button').click()  //2.yol
       })

@@ -23,9 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-import 'cypress-file-upload'
+import 'cypress-file-upload';
+// Import commands.js using ES2015 syntax:
+import './commands';
 
-//elementi her zman resim dosyaisna cevirir
+//elementi her zaman resim dosyaisna ceviren bir metod.Bu metodu projenin her yerinde kullanabiliriz.
+//Bu şekilde kullanıyoruz -->  cy.UploadImage("#exampleInputFile", "kus_resmi.jpg", "kus")
 Cypress.Commands.add('UploadImage', (elementPath,imagePath,logoName)=>{
     cy.fixture(imagePath).as('logo') 
     cy.get(elementPath).then(function (el) {
@@ -39,4 +42,10 @@ Cypress.Commands.add('UploadImage', (elementPath,imagePath,logoName)=>{
     el[0].dispatchEvent(new Event('change',{bubbles:true }))
 
     })
+})
+Cypress.Commands.add("getIframe",(iframe)=>{
+    return cy.get(iframe)
+    .its("0.contentDocument.body")
+    .should("be.visible")
+    .then(cy.wrap)
 })

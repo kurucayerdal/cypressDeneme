@@ -12,6 +12,17 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
+// Dosya indirmek için aşağıdaki eklentiyi yazdık
+const { downloadFile } = require('cypress-downloadfile/lib/addPlugin');
+module.exports = (on, config) => {
+  on('task', { downloadFile })
+}
+
+const { isFileExist } = require('cy-verify-downloads');
+module.exports = (on, config) => {
+  on('task', { isFileExist })
+}
+
 /**
  * @type {Cypress.PluginConfig}
  */
@@ -20,3 +31,8 @@ module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
 }
+
+module.exports = (on, config) => {
+  require('cypress-mochawesome-reporter/plugin')(on);
+};
+

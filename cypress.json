@@ -1,4 +1,15 @@
 {
-    "baseUrl":"https://test.iyikisordun.com/login.php",
-    "baseUrl2":"https://testautomationpractice.blogspot.com/"
+    "baseUrl": "https://test.iyikisordun.com/login.php",
+    "baseUrl2": "https://testautomationpractice.blogspot.com/",
+    "env": {
+        "username": "cypress_test_1@gmail.com",
+        "pass": "admin_123"
+    },
+    "projectId": "kuhkjr",
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+        "reportDir": "cypress/report",
+        "charts": true,
+        "reportPageTitle": "custom-title"
+    }
 }

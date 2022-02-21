@@ -1,0 +1,15 @@
+Cypress Dashboard kullanimi
+
+Testleri terminalden kosturmak icin asagidaki komutu yaziyoruz:
+
+npx cypress run --spec 'cypress\integration\Examples\day11\28_DataTablePaginationControl.spec.js' --record --key a4e79b6d-8eee-4676-8acd-f9e7c222b93a
+
+npx cypress run  testi kosturmak icin run komutu
+
+ --spec 'cypress\integration\Examples\day11\28_DataTablePaginationControl.spec.js'
+--spec yaziyoruz vet ek tirnak icinde kosturmak istedigimiz testin relative path’ini yaziyoruz.
+
+ --record kismi kayit alinacagini belirtiyor.
+
+  --key a4e79b6d-8eee-4676-8acd-f9e7c222b93a
+https://dashboard.cypress.io/ sitesinde yer alan projemize ait key’i yaziyoruz.

@@ -71,6 +71,14 @@ Cypress.Commands.add("login", (email = Cypress.env('username'), password = Cypre
     cy.clickFunction(submitBtnPath)
 })
 
+Cypress.Commands.add('randomMailGenerator',()=>{
+    return (Math.random() + 1).toString(36).substring(7) + "@gmail.com"
+})
+
+Cypress.Commands.add('randomNameGenerator',()=>{
+    return (Math.random() + 1).toString(36).substring(5) + " " + (Math.random() + 1).toString(36).substring(7)
+})
+
 require('cy-verify-downloads').addCustomCommand();
 
 import 'cypress-wait-until';
